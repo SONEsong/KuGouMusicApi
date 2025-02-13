@@ -1,4 +1,4 @@
-const { cryptoRSAEncrypt } = require('../util');
+const { cryptoRSAEncrypt, publicRasKey } = require('../util');
 /**
  * 获取用户关注的歌手
  */

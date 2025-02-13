@@ -5,9 +5,8 @@ module.exports = (params, useAxios) => {
     keyword: params?.keywords || '',
     page: params?.page || 1,
     pagesize: params?.pagesize || 30,
-    // token: '',
+    category: 1,
   };
-
 
   const type = ['special', 'lyric', 'song', 'album', 'author', 'mv'].includes(params.type) ? params.type : 'song';
 

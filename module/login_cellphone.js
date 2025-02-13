@@ -47,10 +47,10 @@ module.exports = (params, useAxios) => {
               res.body.data['token'] = getToken;
             }
           }
-          res.cookie.push(`token=${res.body.data['token']}`);
-          res.cookie.push(`userid=${res.body.data?.userid || 0}`);
-          res.cookie.push(`vip_type=${res.body.data?.vip_type || 0}`);
-          res.cookie.push(`vip_token=${res.body.data?.vip_token || ''}`);
+          res.cookie.push(`token=${res.body.data['token']}; Max-Age=${365 * 24 * 60 * 60}`);
+          res.cookie.push(`userid=${res.body.data?.userid || 0}; Max-Age=${365 * 24 * 60 * 60}`);
+          res.cookie.push(`vip_type=${res.body.data?.vip_type || 0}; Max-Age=${365 * 24 * 60 * 60}`);
+          res.cookie.push(`vip_token=${res.body.data?.vip_token || ''}; Max-Age=${365 * 24 * 60 * 60}`);
         }
         resolve(res);
       })
